@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentru Rebeca 💗</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ff9a9e; 
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* ECRAN LOGARE */
+        #login-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #ff9a9e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        /* CONTINUT - Ascuns initial */
+        #content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #ff4d6d;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        button {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover { transform: scale(1.05); background: #ff758c; }
+
+        .section {
+            background: white;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* STIL SCRISOARE */
+        .scrisoare {
+            background: #fffdf5; /* Culoare de hartie/pergament */
+            border-left: 5px solid #ff4d6d;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            white-space: pre-line; /* Pastreaza spatiile si randurile noi */
+        }
+
+        img { width: 250px; border-radius: 15px; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        
+        .heart {
+            position: fixed;
+            top: -20px;
+            pointer-events: none;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <div class="login-card">
+            <h2 style="color: #ff4d6d;">Acces Privat 🔒</h2>
+            <p>Introdu data specială:<br><b>DD.MM.YYYY</b></p>
+            <input type="text" id="passField" placeholder="Data cand ne-am pus impreuna">
+            <br>
+            <button onclick="verificare()">Intră ❤️</button>
+            <p id="mesajEroare" style="color: red; display: none; margin-top: 10px;">Data este greșită... 🙊</p>
+        </div>
+    </div>
+
+    <div id="content">
+        <header style="padding: 40px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+            <h1>Te iubesc, Rebeca! 💗</h1>
+            <p>Ești cel mai frumos lucru din viața mea</p>
+        </header>
+
+        <div class="section scrisoare">
+            <h2 style="text-align: center; color: #ff4d6d;">💌 Scrisoarea mea pentru tine pui🥺💗💗💗</h2>
+            Draga mea Rebeca,
+
+            Mesaj pentru Puiu meu🥺💗💗💗
+            Aș dori să îți spun prin acest site cât de mult însemni pentru mine. De când ai apărut în viața mea, am început să simt ce înseamnă cu adevărat iubirea și sentimentul de a iubi cu adevărat o persoană. Ești persoana care mă face să zâmbesc chiar și în cele mai grele zile și locul în care mă simt mereu "acasă".
+
+            Îți mulțumesc pentru fiecare moment, pentru fiecare îmbrățișare și pentru că ai ales să mergi alături de mine pe acest drum. Ești o persoană foarte frumoasă, inteligentă, iubitoare și foarte dragă, cu un viitor strălucit în față.
+
+            Promisiunea și Înțelegerea Noastră
+            Imi cer scuze pentru toate fazele care te supără și dacă uneori sunt o persoană dificilă. Recunosc că uneori pot avea o stare proastă, dar avem nevoie de timp împreună pentru a rezolva aceste probleme. Îmi doresc să fii lângă mine și să mă ajuți să trec peste acele momente, pentru că prezența ta este singura care mă liniștește.
+
+            Sincer, nu găsesc mereu cuvintele potrivite, dar sper să simți ce am în suflet. Te iubesc atât de mult încât am făcut o promisiune în fața lui Dumnezeu: că o să am mereu grijă de tine, că te voi iubi necondiționat și că voi face tot ce îmi stă în putere să te fac fericită.
+            Te ador foarte mult puiu meu si scuze daca e cam scurt,dar pe viitor o sa actualizez si o sa fie plin de amintiri si poze.
+
+            Promit să fiu lângă tine, să te susțin și să te iubesc mai mult cu fiecare zi ce trece. Ești universul meu!
+            Bogdan❤️
+        </div>
+
+        <div class="section">
+            <h2>⏳ Timpul nostru cu o eternitate in fata</h2>
+            <h3 id="ceas" style="color: #ff4d6d; font-size: 1.5rem;">Se încarcă...</h3>
+        </div>
+
+        <div class="section">
+            <h2>📸 Amintiri</h2>
+            <img src="poza1.jpg" alt="Poza1">
+            <img src="poza2.jpg" alt="Poza2">
+            <img src="poza3.jpg" alt="Poza3">
+            <img src="poza4.jpg" alt="Poza4">
+            <img src="poza5.jpg" alt="Poza5">
+            <img src="poza6.jpg" alt="Poza6">
+            <img src="poza7.jpg" alt="Poza7">
+            <img src="poza8.jpg" alt="Poza8">
+        </div>
+    </div>
+
+    <script>
+        function verificare() {
+            const parolaIntrodusa = document.getElementById("passField").value;
+            const parolaCorecta = "14.02.2026";
+
+            if (parolaIntrodusa === parolaCorecta) {
+                document.getElementById("login-screen").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                
+                setInterval(actualizeazaCeas, 1000);
+                setInterval(ploaieInimi, 500);
+            } else {
+                document.getElementById("mesajEroare").style.display = "block";
+                document.getElementById("passField").style.borderColor = "red";
+            }
+        }
+
+        function actualizeazaCeas() {
+            const start = new Date("2026-02-14T00:00:00");
+            const acum = new Date();
+            const dif = acum - start;
+
+            const zile = Math.floor(dif / (1000 * 60 * 60 * 24));
+            const ore = Math.floor((dif / (1000 * 60 * 60)) % 24);
+            const min = Math.floor((dif / (1000 * 60)) % 60);
+            const sec = Math.floor((dif / 1000) % 60);
+
+            document.getElementById("ceas").innerText = `${zile} zile, ${ore}h, ${min}m, ${sec}s 💗`;
+        }
+
+        function ploaieInimi() {
+            const inima = document.createElement("div");
+            inima.classList.add("heart");
+            inima.innerHTML = "💗";
+            inima.style.left = Math.random() * 100 + "vw";
+            inima.style.fontSize = Math.random() * 20 + 15 + "px";
+            inima.style.opacity = Math.random();
+            document.body.appendChild(inima);
+            setTimeout(() => { inima.remove(); }, 5000);
+        }
+
+        document.getElementById("passField").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") verificare();
+        });
+    </script>
+</body>
+</html>
